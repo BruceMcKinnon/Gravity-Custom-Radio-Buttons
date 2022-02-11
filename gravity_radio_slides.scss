@@ -1,0 +1,37 @@
+//
+// Make Gravity Forms radio buttons look like normal buttons. Add this SCSS (or convert to CSS) to your WP theme,
+// then add the gf_radio_slides class to your radio buttons in the
+// Gravity Forms > Editor > Radio Buttons > Appearance > Custom CSS Class
+//
+//
+.gf_radio_slides {
+	.gfield_radio {
+		.gchoice {
+			display: inline-block !important;
+
+			input.gfield-choice-input {
+				visibility: hidden !important;
+				margin: 0 !important;
+				height: 0;
+				width: 0;
+			}
+
+			label {
+				background-color: $medium-light-gray !important;
+				padding: rem-calc(10 0);
+				line-height: 100%;
+				text-transform: uppercase;
+				font-weight: $global-weight-bold;
+				font-size: rem-calc(16);
+				margin: rem-calc(0 0 0 -5) !important;
+				text-align: center;
+				min-width: rem-calc(130);
+				color: $white !important;
+			}
+
+			input:checked + label {
+				background-color: $cyan !important;
+			}
+		}
+	}
+}
